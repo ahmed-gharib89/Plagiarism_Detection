@@ -5,6 +5,7 @@ import pandas as pd
 import torch
 import torch.optim as optim
 import torch.utils.data
+import torch.nn as nn
 
 # imports the model in model.py by name
 from model import BinaryClassifier
