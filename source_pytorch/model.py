@@ -27,8 +27,8 @@ class BinaryClassifier(nn.Module):
         super(BinaryClassifier, self).__init__()
 
         # define any initial layers, here
-        self.fc1 = nn.Linear(input_dim, hidden_dim)
-        self.fc2 = nn.Linear(hidden_dim, hidden_dim/2)
+        self.fc1 = nn.Linear(input_features, hidden_dim)
+        self.fc2 = nn.Linear(hidden_dim, int(hidden_dim//2))
         self.fc3 = nn.Linear(hidden_dim/2, output_dim)
         self.drop = nn.Dropout(0.25)
         self.sig = nn.Sigmoid()
